@@ -1,22 +1,37 @@
+//Class Imports
 import classes.lunchAccount;
+import classes.cafeteria;
+import classes.manager;
+
+//UI Test Imports
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JTextField;
+import java.util.*;
+
 
 public class App {
     public static void main(String[] args) throws Exception {
-        lunchAccount Josh = new lunchAccount(100, 13482, true);
-        lunchAccount Will = new lunchAccount(100,13157,true);
+        lunchAccount Josh = new lunchAccount(100, 13482, true, "Josh");
+        manager.addObject(Josh);
+        
+        lunchAccount Will = new lunchAccount(200,13157,true, "Will");
+        manager.addObject(Will);
 
-        MainMenu();
+        lunchAccount Luca = new lunchAccount(300,14582,true, "Luca");
+        manager.addObject(Luca);
+        
+        List<lunchAccount> accountList = manager.listAccounts();
+        lunchAccount FirstAccount = accountList.get(0);
+        System.out.println(FirstAccount.getID());
 
-        Will.Display();
-        Josh.Display();
-        Will.lendMoney(100, Josh);
+        //MainMenu();
         Josh.Display();
         Will.Display();
+        
         
         
     }
@@ -70,7 +85,5 @@ public class App {
         frame.setAlwaysOnTop(true);
 
     }
-
-
 }
 

@@ -1,16 +1,18 @@
 package classes;
+import classes.manager;
 
 public class lunchAccount{
     //Initilizing all variables
     public double value;
     public int ID;
     public boolean specialCustomer;
+    public String customerName;
 
-    public lunchAccount(double ValueInput, int IDInput, boolean CustomerInput){
+    public lunchAccount(double ValueInput, int IDInput, boolean CustomerInput, String CustomerNameInput){
         value = ValueInput;
         ID = IDInput;
         specialCustomer = CustomerInput;
-        checkForSpecial();
+        customerName = CustomerNameInput;
     }
 
     //One more function for ease of life
