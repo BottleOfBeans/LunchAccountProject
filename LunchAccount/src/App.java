@@ -1,20 +1,16 @@
 //Class Imports
-import classes.lunchAccount;
-import classes.cafeteria;
-import classes.manager;
+import classes.*
 
 //UI Test Imports
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JTextField;
+import javax.swing.*
 import java.util.*;
 
 
 public class App {
     public static void main(String[] args) throws Exception {
+        MainMenu();
+        GUI();
+
         lunchAccount Josh = new lunchAccount(100, 13482, true, "Josh");
         manager.addObject(Josh);
         
