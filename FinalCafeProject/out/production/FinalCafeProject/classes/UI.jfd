@@ -1,0 +1,181 @@
+JFDML JFormDesigner: "7.0.5.1.409" Java: "11.0.12" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.intellij.uiDesigner.core.GridLayoutManager ) {
+			"$columnCount": 2
+			"$rowCount": 7
+		} ) {
+			name: "panel1"
+			auxiliary() {
+				"JavaCodeGenerator.variableLocal": true
+			}
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "transferFundsButton"
+				"text": "Transfer Funds"
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"column": 1
+				"row": 3
+				"fill": 1
+				"vSizePolicy": 0
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "displayAccountsButton"
+				"text": "Display Accounts"
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"column": 1
+				"row": 4
+				"fill": 1
+				"vSizePolicy": 0
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "processLunchButton"
+				"text": "Process Lunch"
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"column": 1
+				"row": 2
+				"fill": 1
+				"vSizePolicy": 0
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "closeAccountsButton"
+				"text": "Close Accounts"
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"column": 1
+				"row": 5
+				"fill": 1
+				"vSizePolicy": 0
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "valuedGiftButton"
+				"text": "Valued Gift"
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"column": 1
+				"row": 6
+				"fill": 1
+				"vSizePolicy": 0
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.intellij.uiDesigner.core.GridLayoutManager ) {
+				"$columnCount": 3
+				"$rowCount": 2
+			} ) {
+				name: "panel2"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "Output:"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"anchor": 8
+					"hSizePolicy": 0
+					"vSizePolicy": 0
+				} )
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "textArea1"
+					"text": ""
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"row": 1
+					"fill": 3
+					"hSizePolicy": 6
+					"vSizePolicy": 6
+					"preferredSize": new java.awt.Dimension( 150, 50 )
+					"colSpan": 2
+				} )
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"column": 1
+				"rowSpan": 2
+				"fill": 3
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "addInputHereTextField"
+				"text": "Add Input Here"
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"anchor": 8
+				"fill": 1
+				"indent": 1
+				"hSizePolicy": 6
+				"vSizePolicy": 0
+				"preferredSize": new java.awt.Dimension( 150, -1 )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "enterYourInputHereTextField"
+				"text": "Enter Your Input Here"
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"row": 1
+				"anchor": 8
+				"fill": 1
+				"hSizePolicy": 6
+				"vSizePolicy": 0
+				"preferredSize": new java.awt.Dimension( 150, -1 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Inputs: Student ID, "
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"row": 2
+				"anchor": 8
+				"hSizePolicy": 0
+				"vSizePolicy": 0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "Inputs: FromID, ToID, Amount"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"row": 3
+				"anchor": 8
+				"hSizePolicy": 0
+				"vSizePolicy": 0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "Inputs: NULL"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"row": 4
+				"anchor": 8
+				"hSizePolicy": 0
+				"vSizePolicy": 0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "Inputs: NULL"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"row": 5
+				"anchor": 8
+				"hSizePolicy": 0
+				"vSizePolicy": 0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+				"text": "Inputs: NULL"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"row": 6
+				"anchor": 8
+				"hSizePolicy": 0
+				"vSizePolicy": 0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 555, 400 )
+		} )
+	}
+}
