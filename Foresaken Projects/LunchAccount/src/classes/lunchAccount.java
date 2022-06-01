@@ -1,5 +1,4 @@
 package classes;
-import classes.manager;
 
 public class lunchAccount{
     //Initilizing all variables

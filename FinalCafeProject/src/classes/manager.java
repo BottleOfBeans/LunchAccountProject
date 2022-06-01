@@ -1,6 +1,9 @@
 package classes;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 
 public class manager {
 
@@ -10,7 +13,7 @@ public class manager {
         accountList.add(newObject);
     }
 
-    public static List listAccounts(){
+    public static List<lunchAccount> listAccounts(){
         return accountList;
     }
 }
