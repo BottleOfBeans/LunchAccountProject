@@ -66,7 +66,7 @@ public class lunchAccount{
         System.out.println(String.format("Student Valued Customer   : "+statement));
     }
 
-    public  boolean buyLunch(int price){
+    public  boolean buyLunch(double price){
         if(ID == -1){
             System.out.println("Account Has Been Closed, L+Ratio");
             return false;
