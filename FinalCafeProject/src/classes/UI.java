@@ -1,11 +1,11 @@
 package classes;
-
+//Importing other classes
 import classes.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+//MAJORITY OF THIS CODE WAS AUTO GENERATED
 public class UI {
     private JButton valuedGiftButton;
     private JButton processLunchButton;
@@ -15,10 +15,13 @@ public class UI {
     private JTextPane OutputArea;
     public JPanel mainPanel;
     public cafeteria Cafe = new cafeteria();
+    
+    //Starting the UI Class here
     public UI() {
+        //Waiting for a click on the Process Lunch button
         processLunchButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e) {//Inputting the given inputs
                 String GivenID = (String)JOptionPane.showInputDialog(
                         new JFrame("Input"),
                         "Enter ID",
@@ -37,18 +40,18 @@ public class UI {
                         null,
                         ""
                 );
-
+                //Changing the ID to a integer from String and the price to double from String
                 int GivenIDPRIME = Integer.parseInt(GivenID);
                 double GivenPricePRIME = Double.parseDouble(GivenPrice);
-                boolean TransactionValidity = Cafe.processLunch(GivenIDPRIME,GivenPricePRIME);
-
+                boolean TransactionValidity = Cafe.processLunch(GivenIDPRIME,GivenPricePRIME); //Transaction is running running go!
+                //Changing the output text
                 OutputArea.setText("Transaction Attempted: "+ TransactionValidity);
             }
 
         });
         transferFundsButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e) { //Getting all the inputs
                 String TOID = (String)JOptionPane.showInputDialog(
                         new JFrame("Input"),
                         "Enter Recipient ID",
@@ -76,11 +79,11 @@ public class UI {
                         null,
                         ""
                 );
-                int TOIDPRIME = Integer.parseInt(TOID);
+                int TOIDPRIME = Integer.parseInt(TOID); //Changing the value types to the nessecary types
                 int FROMIDPRIME = Integer.parseInt(FROMID);
                 double PRICEPRIME = Double.parseDouble(Price);
 
-                boolean TransactionStatus = Cafe.wireMoney(FROMIDPRIME, TOIDPRIME, PRICEPRIME);
+                boolean TransactionStatus = Cafe.wireMoney(FROMIDPRIME, TOIDPRIME, PRICEPRIME); //Send it and wire the cash
                 OutputArea.setText("Transaction Status: "+TransactionStatus+"\n If it is false, either the money required is not avaliable or to ID's are wrong");
             }
         });
