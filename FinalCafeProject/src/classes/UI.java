@@ -73,13 +73,26 @@ public class UI {
         closeAccountsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                String GivenID = (String)JOptionPane.showInputDialog(
+                        new JFrame("Input"),
+                        "Enter ID",
+                        "Input",
+                        JOptionPane.PLAIN_MESSAGE,
+                        null,
+                        null,
+                        ""
+                );
 
+                int GivenIDPRIME = Integer.parseInt(GivenID);
+                Cafe.ClosingAccounts(GivenIDPRIME);
+                OutputArea.setText("Account has sucssesfully been closed! (It hurt my feelings)");
             }
         });
         valuedGiftButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Cafe.ValuedGift();
+                OutputArea.setText("All customers with over $50 in their account have been gifted $5");
             }
         });
     }

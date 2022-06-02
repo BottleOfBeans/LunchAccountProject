@@ -32,10 +32,25 @@ public class cafeteria {
                 return accountList.get(x).Display();
             }
         }
-        return "No User Nothing Found";
+        return "No User Nothing Found (Account may have been closed)";
 
     }
+    public void ValuedGift(){
+        List<lunchAccount> accountList = manager.listAccounts();
 
-    
+        for(int x = 0; x<accountList.toArray().length; x++){
+            if((accountList.get(x).getSpecialCustomer())){
+                accountList.get(x).refreshFunds(5);
+            }
+        }
+    }
 
+    public void ClosingAccounts(int ID){
+        List<lunchAccount> accountList = manager.listAccounts();
+        for(int x = 0; x<accountList.toArray().length; x++){
+            if((accountList.get(x).getID()) == (ID)){
+                accountList.get(x).closeAccount();
+            }
+        }
+    }
 }
