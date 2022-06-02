@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FinalCafeProject/FinalCafeProject.iml" filepath="$PROJECT_DIR$/FinalCafeProject/FinalCafeProject.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/LunchAccountProject.iml" filepath="$PROJECT_DIR$/.idea/LunchAccountProject.iml" />
     </modules>
   </component>
 </project>

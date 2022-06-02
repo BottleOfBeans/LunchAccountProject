@@ -13,13 +13,15 @@ public class UI {
     private JButton displayAccountsButton;
     private JButton transferFundsButton;
     private JTextPane OutputArea;
+    private JPanel mainPanel;
     public cafeteria Cafe = new cafeteria();
     public UI() {
-
         JFrame frame = new JFrame("Main");
+        frame.setContentPane(new UI().mainPanel);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+
         processLunchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -71,6 +73,5 @@ public class UI {
             }
         });
     }
-
 
 }
