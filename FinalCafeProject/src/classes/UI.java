@@ -49,7 +49,39 @@ public class UI {
         transferFundsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                String TOID = (String)JOptionPane.showInputDialog(
+                        new JFrame("Input"),
+                        "Enter Recipient ID",
+                        "Input",
+                        JOptionPane.PLAIN_MESSAGE,
+                        null,
+                        null,
+                        ""
+                );
+                String FROMID = (String)JOptionPane.showInputDialog(
+                        new JFrame("Input"),
+                        "Enter Sender ID",
+                        "Input",
+                        JOptionPane.PLAIN_MESSAGE,
+                        null,
+                        null,
+                        ""
+                );
+                String Price = (String)JOptionPane.showInputDialog(
+                        new JFrame("Input"),
+                        "Enter Amount",
+                        "Input",
+                        JOptionPane.PLAIN_MESSAGE,
+                        null,
+                        null,
+                        ""
+                );
+                int TOIDPRIME = Integer.parseInt(TOID);
+                int FROMIDPRIME = Integer.parseInt(FROMID);
+                double PRICEPRIME = Double.parseDouble(Price);
 
+                boolean TransactionStatus = Cafe.wireMoney(FROMIDPRIME, TOIDPRIME, PRICEPRIME);
+                OutputArea.setText("Transaction Status: "+TransactionStatus+"\n If it is false, either the money required is not avaliable or to ID's are wrong");
             }
         });
         displayAccountsButton.addActionListener(new ActionListener() {

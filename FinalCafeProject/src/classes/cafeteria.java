@@ -44,7 +44,6 @@ public class cafeteria {
             }
         }
     }
-
     public void ClosingAccounts(int ID){
         List<lunchAccount> accountList = manager.listAccounts();
         for(int x = 0; x<accountList.toArray().length; x++){
@@ -52,5 +51,25 @@ public class cafeteria {
                 accountList.get(x).closeAccount();
             }
         }
+    }
+    public boolean wireMoney(int IDFrom, int TOID, double TransferValue){
+        List<lunchAccount> accountList = manager.listAccounts();
+
+        lunchAccount FromAccount;
+        lunchAccount ToAccount;
+
+        for(int x = 0; x<accountList.toArray().length; x++){
+            if((accountList.get(x).getID()) == (IDFrom)){
+                FromAccount = accountList.get(x);
+                for(int i = 0; i<accountList.toArray().length; i++){
+                    if((accountList.get(i).getID()) == (TOID)){
+                        ToAccount = accountList.get(i);
+                        return FromAccount.lendMoney(TransferValue,ToAccount);
+
+                    }
+                }
+            }
+        }
+        return false;
     }
 }

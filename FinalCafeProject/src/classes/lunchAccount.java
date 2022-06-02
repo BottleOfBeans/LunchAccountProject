@@ -111,13 +111,16 @@ public class lunchAccount{
         System.out.println("Thank you for NOT USING this service, go away man it hurt my feelings :)...");
     }
 
-    public void lendMoney(double amountLend, lunchAccount accountLendTo){
+    public boolean lendMoney(double amountLend, lunchAccount accountLendTo){
         if(value>amountLend){
             accountLendTo.setValue(accountLendTo.getValue()+amountLend);
             value = value-amountLend;
-        }else{
-            accountLendTo.setValue(accountLendTo.getValue()+value);
+            return true;
+        }else {
+            accountLendTo.setValue(accountLendTo.getValue() + value);
+            double tempValue = value;
             value = 0;
+            return true;
         }
     }
 }
