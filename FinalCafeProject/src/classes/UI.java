@@ -13,19 +13,13 @@ public class UI {
     private JButton displayAccountsButton;
     private JButton transferFundsButton;
     private JTextPane OutputArea;
-    private JPanel mainPanel;
+    public JPanel mainPanel;
     public cafeteria Cafe = new cafeteria();
     public UI() {
-        JFrame frame = new JFrame("Main");
-        frame.setContentPane(new UI().mainPanel);
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-
         processLunchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int GivenID = (int)JOptionPane.showInputDialog(
+                String GivenID = (String)JOptionPane.showInputDialog(
                         new JFrame("Input"),
                         "Enter ID",
                         "Input",
@@ -34,7 +28,7 @@ public class UI {
                         null,
                         ""
                 );
-                double GivenPrice = (double) JOptionPane.showInputDialog(
+                String GivenPrice = (String) JOptionPane.showInputDialog(
                         new JFrame("Input"),
                         "Enter the price",
                         "Input",
@@ -43,7 +37,11 @@ public class UI {
                         null,
                         ""
                 );
-                boolean TransactionValidity = Cafe.processLunch(GivenID,GivenPrice);
+
+                int GivenIDPRIME = Integer.parseInt(GivenID);
+                double GivenPricePRIME = Double.parseDouble(GivenPrice);
+                boolean TransactionValidity = Cafe.processLunch(GivenIDPRIME,GivenPricePRIME);
+
                 OutputArea.setText("Transaction Attempted: "+ TransactionValidity);
             }
 
@@ -57,7 +55,19 @@ public class UI {
         displayAccountsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                String GivenID = (String)JOptionPane.showInputDialog(
+                        new JFrame("Input"),
+                        "Enter ID",
+                        "Input",
+                        JOptionPane.PLAIN_MESSAGE,
+                        null,
+                        null,
+                        ""
+                );
 
+                int GivenIDPRIME = Integer.parseInt(GivenID);
+                String OutputInformation = Cafe.displayAccount(GivenIDPRIME);
+                OutputArea.setText(OutputInformation);
             }
         });
         closeAccountsButton.addActionListener(new ActionListener() {

@@ -49,10 +49,10 @@ public class lunchAccount{
     }
 
     //Custom Methods
-    public  void Display(){
+    public String Display(){
         if(ID == -1){
             System.out.println("Account Has Been Closed, L+Ratio");
-            return;
+            return "User Closed Account";
         }
         checkForSpecial();
         String statement;
@@ -61,9 +61,7 @@ public class lunchAccount{
         }else{
             statement = "Broke mf";
         }
-        System.out.println(String.format("Student ID                : "+ID));
-        System.out.println(String.format("Student Amount            : "+value));
-        System.out.println(String.format("Student Valued Customer   : "+statement));
+        return(String.format("Student ID                : "+ID+"\n"+"Student Amount            : "+value+"\n"+"Student Valued Customer   : "+statement));
     }
 
     public  boolean buyLunch(double price){

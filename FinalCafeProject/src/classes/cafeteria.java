@@ -11,23 +11,30 @@ public class cafeteria {
         ;
     }
     public boolean processLunch(int ID, double Price){
-        //Creating placeholder for the new ID;
-        for(int x=accounts.toArray().length-1; x>=0; x--){
-            if(accounts.get(x).getID() == ID){
-                accounts.get(x).buyLunch(Price);
+        //Creating new variable for the new account list
+        List<lunchAccount> accountList = manager.listAccounts();
+
+        for(int x = 0; x<accountList.toArray().length; x++){
+            if((accountList.get(x).getID()) == (ID)){
+                accountList.get(x).buyLunch(Price);
                 return true;
-            }else{
-                return false;
             }
         }
         return false;
 
 
 
-
     }
-    public java.util.List<lunchAccount> displayAccounts(){
-        return manager.listAccounts();
+    public String displayAccount(int ID){
+        List<lunchAccount> accountList = manager.listAccounts();
+
+        for(int x = 0; x<accountList.toArray().length; x++){
+            if((accountList.get(x).getID()) == (ID)){
+                return accountList.get(x).Display();
+            }
+        }
+        return "No User Nothing Found";
+
     }
 
 

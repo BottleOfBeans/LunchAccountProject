@@ -11,7 +11,11 @@ import java.awt.event.ActionListener;
 public class main {
     public static void main(String[] args) throws Exception {
 
-        new UI();
+        JFrame frame = new JFrame("Main");
+        frame.setContentPane(new UI().mainPanel);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
 
 
         lunchAccount Josh = new lunchAccount(100, 13482, true, "Josh");
@@ -28,8 +32,8 @@ public class main {
         System.out.println(FirstAccount.getID());
 
         //MainMenu();
-        Josh.Display();
-        Will.Display();
+        System.out.println(Josh.Display());
+        System.out.println(Will.Display());
 
 
     }
