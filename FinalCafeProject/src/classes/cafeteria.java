@@ -16,8 +16,7 @@ public class cafeteria {
 
         for(int x = 0; x<accountList.toArray().length; x++){
             if((accountList.get(x).getID()) == (ID)){
-                accountList.get(x).buyLunch(Price);
-                return true;
+                return accountList.get(x).buyLunch(Price);
             }
         }
         return false;
@@ -37,6 +36,6 @@ public class cafeteria {
 
     }
 
-
+    
 
 }
